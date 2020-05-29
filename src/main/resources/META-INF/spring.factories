@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.gw.log.autoconfigure.LogAspect,\
+ com.gw.log.autoconfigure.LogAutoConfiguration
+
+#此处的 \是为了 换行也能读取到下面的 配置文件 ，这个文件的作用就是来告诉我们呢的IoC容器，配置文件在哪里。
