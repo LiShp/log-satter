@@ -110,7 +110,7 @@ public class LogAspect {
             // 异步将Log对象发送到队
                 try {
                     String token = request.getHeader("authorization")!=null?request.getHeader("authorization").split(" ")[1]:null;
-                    remoteLogService.saveLog(sysLog,token);
+                    remoteLogService.saveLog(sysLog,"Bearer "+token);
                     log.info("通过feign发送到log-center服务：{}", log);
                 } catch (Exception e2) {
                     e2.getMessage();
