@@ -23,9 +23,8 @@ public class RemoteLogServiceFallback implements RemoteLogService {
     }
 
     @Override
-    public String saveLog(SysLog sysLog, String Authorization) {
+    public void saveLog(SysLog sysLog, String Authorization) {
         LOG.error("feign 插入日志失败", cause);
-        return null;
     }
 
 }

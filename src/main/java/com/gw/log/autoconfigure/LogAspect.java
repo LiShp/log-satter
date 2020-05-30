@@ -56,8 +56,6 @@ public class LogAspect {
         }
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         LogAnnotation logAnnotation = methodSignature.getMethod().getDeclaredAnnotation(LogAnnotation.class);
-        //方法名称
-        String name = methodSignature.getName();
         sysLog.setOperationModule(logAnnotation.module());
         //描述信息
         sysLog.setRemark(logAnnotation.description());
@@ -117,10 +115,7 @@ public class LogAspect {
                 } catch (Exception e2) {
                     e2.getMessage();
                 }
-
         }
-
-
     }
     private void getMethod(ProceedingJoinPoint joinPoint, SysLog sysLog) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

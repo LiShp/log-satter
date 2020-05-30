@@ -2,7 +2,6 @@ package com.gw.log.feign;
 
 import com.gw.log.entity.SysLog;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -17,6 +16,6 @@ public interface RemoteLogService {
      * @return boolean
      */
     @PostMapping("/syslog/createLog")
-    String saveLog(@RequestBody SysLog sysLog, @RequestHeader("Authorization") String Authorization);
+    void saveLog(@RequestBody SysLog sysLog, @RequestHeader("Authorization") String Authorization);
 
 }
