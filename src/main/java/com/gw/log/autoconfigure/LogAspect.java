@@ -63,7 +63,7 @@ public class LogAspect {
         String method_path = request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE).toString();
         sysLog.setRequestAddress(method_path);
         //请求方式
-        String   requestMethod =    request.getMethod();
+        String requestMethod = request.getMethod();
         sysLog.setRequestMethod(requestMethod);
         //系统名称
         sysLog.setSystemName(StringUtils.isNotBlank(sysLog.getSystemName()) ? sysLog.getSystemName() : serverName);

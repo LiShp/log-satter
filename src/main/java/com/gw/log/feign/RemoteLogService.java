@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  * @author wjn
  * @date 2020-05-28
  */
-@FeignClient(value = "log" , url = "http://127.0.0.1:8888" , fallback = RemoteLogServiceFallback.class)
+@FeignClient(value = "log" , url = "http://logcenter.test.paas.gwm.cn/", fallback = RemoteLogServiceFallback.class)
 public interface RemoteLogService {
     /**
      * 保存日志
